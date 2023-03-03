@@ -9,7 +9,8 @@ html {
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 800px;
+	max-width: 960px;
+    width: 98%;
     margin: 0 auto;
     border: 3px solid #931420;
     background-color: #fffded;
@@ -40,14 +41,12 @@ header h3 {
 }
 header img {
 	float: left;
-	padding: 0 30px;
+	padding: 0 3.125%;
 }
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
 }
-
-/* the styles for the nav menu */
-
+/* the styles for the navigation menu */
 #nav_menu ul {
 	list-style-type: none;
 	margin: 0;
@@ -57,48 +56,44 @@ header img {
 
 #nav_menu ul li {
 	float: left;
+	width: 20%;
 }
-
 #nav_menu ul li a {
-	display: block;
-	width: 160px;
-	text-align: center;
-	padding: 1em 0;
-	text-decoration: none;
-	background-color: #800000;
-	color: white;
-	font-weight: bold;
+    display: block;
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: #800000;
+    color: white;
+    font-weight: bold;
 }
-
-#nav_menu ul li ul {
-	display: none;
-	position: absolute;
-	top: 100%;
+#nav_menu a.current {
+	color: yellow;
 }
-
-#nav_menu ul li ul li {
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+#nav_menu ul ul li {
 	float: none;
+	width: 192px;
 }
 
 #nav_menu ul li:hover > ul {
 	display: block;
 }
-
 #nav_menu > ul::after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-#nav_menu .current {
-	color: yellow;
+    content: "";
+    clear: both;
+    display: block;
 }
 
 /* the styles for the section */
 section {
-	width: 525px;
+	width: 54.6875%;
 	float: right;
-	padding: 0 20px 20px 20px;
+	padding: 0 2.0833333% 20px 2.0833333%;
 }
 section h1 {
 	font-size: 150%;
@@ -142,19 +137,22 @@ article img {
 	float: right;
 	margin: .5em 0 1em 1em;
 	border: 1px solid black;
+	max-width: 40%;
+	min-width: 150px;
 }
 
 /* the styles for the aside */
 aside {
-	width: 215px;
+	width: 22.3958333%;
 	float: right;
-	padding: 0 0 20px 20px;
+	padding: 0 0 20px 2.0833333%;
 }
 aside h2 {
 	color: #800000;
 	font-size: 130%;
 	padding: .5em 0 .25em 0;
 }
+
 aside h3 {
 	font-size: 105%;
 	padding-bottom: .25em;
@@ -173,4 +171,43 @@ footer p {
 	text-align: center;
 	color: white;
 	padding: 1em 0;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (width <= 420px) {
+	aside h2 a {
+		font-size: 85%;
+	}
+
+	section h1 {
+		font-size: 125%;
+	}
+
+	section h2, aside h2 {
+		font-size: 110%;
+	}
+}
+
+@media only screen and (width <= 380px){
+	header img {
+		float: none;
+		text-align: center;
+	}
+
+	section, aside {
+		float: none;
+		width: 97.9166666%;
+	}
+
+	aside {
+		padding-right: 2.0833333%;
+	}
+
+	article img {
+		max-width: 30%;
+	}
+
+	aside div {
+		column-count: 2;
+	}
 }
