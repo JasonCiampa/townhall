@@ -173,6 +173,10 @@ footer p {
 	padding: 1em 0;
 }
 
+#mobile_menu {
+	display: none;
+}
+
 /* MEDIA QUERIES */
 @media only screen and (width <= 420px) {
 	aside h2 a {
@@ -186,6 +190,7 @@ footer p {
 	section h2, aside h2 {
 		font-size: 110%;
 	}
+
 }
 
 @media only screen and (width <= 380px){
@@ -209,5 +214,23 @@ footer p {
 
 	aside div {
 		column-count: 2;
+	}
+
+	#nav_menu {
+		display: none;
+	}
+
+	#mobile_menu {
+		display: block;
+	}
+
+	.slicknav_menu {
+		background-color: #800000 !important
+	}
+}
+
+@media only screen and (width >= 375px){
+	body {
+		font-size: 90%;
 	}
 }
